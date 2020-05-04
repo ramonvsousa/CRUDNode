@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUDNodeJS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/show">CrudNode</a>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/show">Registros</a>
+      <a class="nav-item nav-link" href="/">Inserir</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Formulário de Cadastro</h2>
+    <form action="/show" method="POST"> 
+      <div class="row">
+        <div class="col">
+          <label for="name">Nome</label>
+          <input type="text" class="form-control" placeholder="Nome" name="name">
+        </div>
+        
+        <div class="col">
+          <label for="surname">Sobrenome</label>
+          <input type="text" class="form-control" placeholder="Sobrenome" name="surname">
+        </div>
+
+        <div class="col">
+          <label for="gender">Gênero</label>
+          <select class="custom-select" name="gender">
+            <option selected disabled value="">Selecione seu gênero...</option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="rg">RG</label>
+          <input type="text" class="form-control" placeholder="RG" name="rg">
+        </div>
+        <div class="col">
+          <label for="cpf">CPF</label>
+          <input type="text" class="form-control" placeholder="CPF" name="cpf">
+        </div>
+        <div class="col">
+          <label for="born">Data de Nascimento</label>
+          <input type="date" class="form-control" name="born">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="telefone">Telefone Residencial</label>
+          <input type="tel" class="form-control" placeholder="Telefone Residencial" name="telefone">
+        </div>
+        
+        <div class="col">
+          <label for="celular">Telefone Celular</label>
+          <input type="tel" class="form-control" placeholder="Telefone Celular" name="celular">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="email">Endereço de Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="endereco">Endereço</label>
+          <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua Qwerty">
+        </div>
+        <div class="col">
+          <label for="numero">Numero</label>
+          <input type="number" class="form-control" id="numero" name="numero" placeholder="Número">
+        </div>
+        <div class="col">
+          <label for="cidade">Cidade</label>
+          <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
+        </div>
+        <div class="col">
+          <label for="estado">Estado</label>
+          <input type="text" class="form-control" id="estado" name="estado" placeholder="Estado">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-1">
+          <label>Interesses: </label>
+        </div>        
+        <div class="col-auto my-1">
+          <div class="custom-control custom-checkbox mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="frontend" name="frontend" value="frontend">
+            <label class="custom-control-label" for="frontend">Front-end</label>
+          </div>
+        </div>
+        <div class="col-auto my-1">
+          <div class="custom-control custom-checkbox mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="web" name="web" value="web">
+            <label class="custom-control-label" for="web">Web</label>
+          </div>
+        </div>
+        <div class="col-auto my-1">
+          <div class="custom-control custom-checkbox mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="backend" name="backend" value="backend">
+            <label class="custom-control-label" for="backend">Back-end</label>
+          </div>
+        </div>
+        <div class="col-auto my-1">
+          <div class="custom-control custom-checkbox mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="mobile" name="mobile" value="mobile">
+            <label class="custom-control-label" for="mobile">Mobile</label>
+          </div>
+        </div>
+        <div class="container">
+          <a href="/show" class="btn btn-outline-secondary" role="button">Cancelar</a>
+          <button class="btn btn-primary" type="submit">Registrar</button>
+      </div>
+      </form>
+
+  </div>
+
+
+
+<!--
+    <form action="/show" method="POST">
+      Nome: 
+      <input type="text" placeholder="Nome" name="name"> 
+      <input type="text" placeholder="Sobrenome" name="surname">
+      <br>
+      RG: 
+      <input type="text" name="rg" placeholder="RG">
+      <br>
+      CPF: 
+      <input type="text" name="cpf" placeholder="CPF">
+      <br>
+      Sexo: 
+      <input type="radio" id="male" name="gender" value="Masculino">
+      <label for="male">Masculino</label>
+      <input type="radio" id="female" name="gender" value="Feminino">
+      <label for="female">Feminino</label>
+      <br>
+      Data de Nascimento: 
+      <input type="date" name="born">
+      <br>
+      Telefone: 
+      <input type="tel" name="telefone" placeholder="Telefone Residencial">
+      <input type="tel" name="celular" placeholder="Telefone Celular">
+      <br>
+      Email: 
+      <input type="email" name="email" placeholder="E-mail">
+      <br>
+      Endereço: 
+      <input type="text" name="endereco" placeholder="Endereço">
+      <input type="number" name="numero" placeholder="Número">
+      <br>
+      Área de Interesse:
+      <input type="checkbox" id="interesse" name="frontend" value="Front-end">
+      <label for="interesse">Front-end</label>
+      <input type="checkbox" id="interesse" name="backend" value="Back-end">
+      <label for="interesse">Back-end</label>
+      <input type="checkbox" id="interesse" name="web" value="Web">
+      <label for="interesse">Web</label>
+      <input type="checkbox" id="interesse" name="mobile" value="Mobile">
+      <label for="interesse">Mobile</label>
+      <br>
+      <button type="submit">Submit</button>
+      <button><a href="/show">Registros</a></button>
+    </form>
+-->
+ 
+</body>
+</html>
